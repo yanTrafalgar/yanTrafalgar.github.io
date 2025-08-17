@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Yan Gonçalves da Silva</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background-color: #f4f7f6;
+            --text-color: #333;
+            --card-bg-color: #ffffff;
+            --highlight-color: #e74c3c;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 5px solid var(--secondary-color);
+        }
+        
+        img.profile-pic {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 6px solid var(--secondary-color);
+            object-fit: cover;
+            margin-top: -100px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            background-color: var(--background-color);
+        }
+
+        header h1 {
+            margin: 10px 0 5px;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        header h3 {
+            margin: 0;
+            font-weight: 300;
+            font-size: 1.2rem;
+            color: #bdc3c7;
+        }
+
+        section {
+            padding: 40px 30px;
+            margin-bottom: 20px;
+            background: var(--card-bg-color);
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            text-align: left;
+        }
+        
+        .about-section {
+            text-align: center;
+            padding-top: 120px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+        
+        b, strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--highlight-color);
+            text-decoration: underline;
+        }
+        
+        .contact-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: var(--primary-color);
+            color: #bdc3c7;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Yan Gonçalves da Silva</h1>
+            <h3>Bombeiro Civil • Futuro Desenvolvedor Front-End</h3>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="about-section">
+            <img src="src/imagem/eu.jpg" alt="Foto de Yan Gonçalves da Silva" class="profile-pic">
+            
+            <h2>Sobre mim</h2>
+            <p>
+                Olá! Sou <b>Yan Gonçalves da Silva</b>, tenho 23 anos e sou formado como <b>Bombeiro Civil</b>. Atualmente, estou em uma jornada de transição de carreira, buscando novos horizontes na área da <b>programação</b>, com foco inicial em <b>Desenvolvimento Front-End</b>. Meu objetivo é expandir constantemente meus conhecimentos e construir uma carreira sólida na área de tecnologia.
+            </p>
+        </section>
+
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <p>
+                Estou focado em aprender as seguintes tecnologias: HTML5, CSS3, JavaScript e Git/GitHub.
+            </p>
+        </section>
+
+        <section id="projetos">
+            <h2>Projetos</h2>
+            <p>
+                Em breve, compartilharei aqui os projetos que estou desenvolvendo durante meus estudos.
+            </p>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p style="text-align: center;">Estou aberto a novas oportunidades e conexões. Entre em contato comigo!</p>
+            <div class="contact-info">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:yyanngoncalves@gmail.com">yyanngoncalves@gmail.com</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="current-year">2025</span> — Portfólio de Yan Gonçalves da Silva</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearSpan = document.getElementById('current-year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+</html>
